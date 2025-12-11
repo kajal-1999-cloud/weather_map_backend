@@ -6,7 +6,7 @@ import CityModal from "./pages/CityModal";
 const fetcher = (url) => fetch(url).then((r) => r.json());
 
 export default function App() {
-  const { data: cities , error, isLoading } = useSWR("http://localhost:4000/api/cities", fetcher, {
+  const { data: cities , error, isLoading } = useSWR("https://weather-map-frontend.onrender.com/api/cities", fetcher, {
     refreshInterval: 30000,
   });
   const [active, setActive] = React.useState(null);

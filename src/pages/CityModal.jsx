@@ -59,7 +59,7 @@ import { CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 
 export default function CityModal({ cityId, onClose }) {
-  const { data } = useSWR(`http://localhost:4000/api/city/${cityId}`, (url) =>
+  const { data } = useSWR(`https://weather-map-frontend.onrender.com/api/city/${cityId}`, (url) =>
     fetch(url).then((r) => r.json())
   );
   const latest = data?.latest;
