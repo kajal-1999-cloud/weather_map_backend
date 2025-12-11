@@ -2,7 +2,7 @@ import React from "react";
 import { MapContainer, TileLayer, Marker } from "react-leaflet";
 import useSWR from "swr";
 import CityModal from "./pages/CityModal";
-
+import "./components/Leaflet"
 const fetcher = (url) => fetch(url).then((r) => r.json());
 
 export default function App() {
