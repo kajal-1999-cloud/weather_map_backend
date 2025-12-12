@@ -1,4 +1,8 @@
 # React + Vite
+Deployments - weather-map-seven-chi.vercel.app
+
+
+
 
 <!-- run this cmd to manually inject the data  -->
 curl.exe -X POST http://localhost:4000/api/refresh
