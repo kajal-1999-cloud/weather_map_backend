@@ -3,6 +3,7 @@ import { MapContainer, TileLayer, Marker } from "react-leaflet";
 import useSWR from "swr";
 import CityModal from "./pages/CityModal";
 import "./components/Leaflet"
+import { customMarkerIcon } from "./components/Leaflet"; 
 const fetcher = (url) => fetch(url).then((r) => r.json());
 
 export default function App() {
@@ -21,13 +22,13 @@ export default function App() {
 
   if (error)
     return (
-      <div className="h-screen flex justify-center items-center text-red-600 text-lg">
+      <div className="h-screen flex justify-center items-center text-red-600 text-lg mt-3">
         Failed to load cities ⚠
       </div>
     );
 
   return (
-    <div className="h-[80vh] w-[80%] m-auto">
+    <div className="h-[80vh] w-[80%] mt-3 m-auto">
       <MapContainer center={[20, 0]} zoom={2} className="h-full">
         <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
         {cities?.map((c) => (
@@ -35,6 +36,8 @@ export default function App() {
             key={c.cityId}
             position={[c.coords.lat, c.coords.lon]}
             eventHandlers={{ click: () => setActive(c.cityId) }}
+            icon={customMarkerIcon}
+
           />
         ))}
 
