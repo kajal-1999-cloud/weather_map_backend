@@ -51,9 +51,6 @@
 //   );
 // }
 
-
-
-import React from "react";
 import useSWR from "swr";
 import { CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
