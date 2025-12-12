@@ -1,5 +1,7 @@
 # React + Vite
-Deployments - weather-map-seven-chi.vercel.app
+Deployments - https://weather-map-seven-chi.vercel.app
+
+
 
 
 
